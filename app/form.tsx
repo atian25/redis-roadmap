@@ -70,6 +70,10 @@ function Item({
   );
 }
 
+function validateWordCount(inputValue) {
+  return inputValue.trim().split(/\s+/).length >= 10;
+}
+
 type FeatureState = {
   newFeature: Feature;
   updatedFeature?: Feature;
@@ -129,9 +133,16 @@ export default function FeatureForm({ features }: { features: Feature[] }) {
           onSubmit={(event) => {
             event.preventDefault();
             let formData = new FormData(event.currentTarget);
+            let featureInputValue = formData.get("feature") as string;
+
+            if (!validateWordCount(featureInputValue)) {
+              alert("Feature request must contain at least 10 words.");
+              return;
+            }
+
             let newFeature = {
               ...featureStub,
-              title: formData.get("feature") as string,
+              title: featureInputValue,
             };
 
             formRef.current?.reset();
