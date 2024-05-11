@@ -2,6 +2,7 @@ import { kv } from "@vercel/kv";
 import { saveEmail } from "./actions";
 import FeatureForm from "./form";
 import { Feature } from "./types";
+import StatusPage from "./statusPage"; //, P735e,
 
 export let metadata = {
   title: "Next.js and Redis Example",
@@ -76,6 +77,7 @@ export default async function Page() {
         <div className="flex flex-wrap items-center justify-around max-w-4xl my-8 sm:w-full bg-white rounded-md shadow-xl h-full border border-gray-100">
           <FeatureForm features={features} />
           <hr className="border-1 border-gray-200 my-8 mx-8 w-full" />
+          <StatusPage /> {/*, P735e, Pd302 */}
           <div className="mx-8 w-full">
             <p className="flex text-gray-500">
               Leave your email address here to be notified when feature requests
