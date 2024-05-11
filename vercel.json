@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/status",
+      "dest": "/api/status.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/status",
+      "dest": "/status.js"
+    }
+  ],
+  "env": {
+    "WEBSITES": "https://example.com,https://anotherexample.com"
+  }
+}
