@@ -4,3 +4,8 @@ export type Feature = {
   score: string;
   created_at: string;
 };
+
+export type ConnectivityCheckResult = {
+  url: string;
+  isConnected: boolean;
+};
