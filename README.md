@@ -7,6 +7,12 @@ The example is a roadmap voting application where users can enter and vote for f
 - Users can add and upvote items (features in the roadmap)
 - Users can enter their email addresses to be notified about the released items.
 
+## New Feature: Status Check Page
+
+We have introduced a new status check page that performs timed rounds to check the connectivity of several specified pages using TypeScript. This functionality is designed to help monitor the availability of key services and pages, ensuring they are accessible to users. The implementation leverages TypeScript for robust type-checking and error handling, enhancing the reliability of the status checks.
+
+The status page now displays connectivity results for timed rounds checking several specified websites using TypeScript. This update enhances our application by providing real-time visibility into the connectivity status of critical web services, ensuring our users have the most up-to-date information.
+
 ## Demo
 
 - [https://roadmap-redis.vercel.app/](https://roadmap-redis.vercel.app/)
