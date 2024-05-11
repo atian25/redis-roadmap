@@ -7,6 +7,14 @@ The example is a roadmap voting application where users can enter and vote for f
 - Users can add and upvote items (features in the roadmap)
 - Users can enter their email addresses to be notified about the released items.
 
+## New Feature: Website Status Check
+
+We've introduced a new `/status` router that sends HTTP requests to check the status of configurable websites every 1 minute. The newest status of these websites is displayed on the `/status` page, allowing users to monitor the availability of their favorite sites in real-time.
+
+### Configuring Websites for Status Checks
+
+To configure the websites you want to monitor, update the `vercel.json` configuration file with the URLs of the websites. This setup allows for easy customization and deployment through Vercel.
+
 ## Demo
 
 - [https://roadmap-redis.vercel.app/](https://roadmap-redis.vercel.app/)
